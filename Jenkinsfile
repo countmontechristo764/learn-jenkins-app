@@ -21,6 +21,13 @@ pipeline {
                 ls -la
                 '''
             }
+        stage('Test'){
+            steps{
+                sh ''' 
+                tesf -f build/index.html
+                '''
+            }
+        }
         }
     }
 }
